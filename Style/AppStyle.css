@@ -1,3 +1,60 @@
+#App-Header{
+  width: 100%;
+  height: 10%;
+
+  position: relative;
+
+  color: white;
+
+  background-color: black;
+}
+
+#Header-Title{
+  width: 100%;
+  height: 25%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 40px;
+  letter-spacing: 10px;
+  font-family: Headache;
+
+
+  text-align: center;
+
+  color: white;
+}
+
+#Header-Pathing{
+  width: 20%;
+  height: 100%;
+
+  font-family: Abyssopelagic;
+
+  text-align: center;
+
+  color: rgb(255, 255, 255);
+
+  font-size: 40px;
+  letter-spacing: 20px;
+
+}
+
+#Header-Pathing:hover{
+  background-color: rgb(25, 25, 25);
+}
+
+#Pathing-Title{
+  padding-top: 5.5%;
+}
+
+#Pathing-Content{
+  display: none;
+}
+
 /**
 * BODY
 **/

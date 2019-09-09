@@ -25,8 +25,7 @@ function CreateLinkButton(Link){
 
 }
 
-
-function CreateButtons(){
+function CreateOwOs(){
   window.Links = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_bOYGHLNEdbOWSsXSY8Wg5gPaz_pcWRJluWR-kR9Zw4o2JUCn",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHQURmrle6OrXYT5eUgYk2oUKsV3S8AzYCJcq58WSLzVPYkM3nUA",
@@ -80,11 +79,24 @@ function AddKeyPressChange(){
     }
 
     //Add items
-    CreateButtons();
+    CreateOwOs();
   }
 }
 
+function AddCollapsableMenu(){
+  let Menu = document.getElementById("Header-Pathing");
+
+  Menu.onclick = function(){
+      console.log("clicl")
+  }
+
+}
+
 document.addEventListener("DOMContentLoaded", function(){
-  CreateButtons();
+  //Add menu content
+  AddCollapsableMenu();
+
+  //Main Content
+  CreateOwOs();
   AddKeyPressChange();
 });
