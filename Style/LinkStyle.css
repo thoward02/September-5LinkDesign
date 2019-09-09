@@ -1,32 +1,40 @@
 .Link{
-  width: 25%;
+  margin-left: 20%;
+  margin-bottom: 2%;
+
+  float: left;
+
+  width: 20%;
   height: 30%;
 
   margin-left: 2%;
 
   border-radius: 25px;
 
-
+  overflow: hidden;
 
   background-color: cyan;
 
 }
 
 .Link div{
-  height: 72%;
-  
+  height: 2%;
   padding: 10%;
 
+  font-family: Abyssopelagic;
+
+  font-size: 30px;
+  font-weight: 400;
+
+  text-align: center;
 }
 
 
 .Link-Image{
-  width: 98%;
-  height: 20%;
+  width: 100%;
+  height: 70%;
 
-  padding: 2%;
+  margin-top: 10%;
 
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
 
 }

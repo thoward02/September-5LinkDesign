@@ -1,53 +1,24 @@
 /**
-* HEADER
-**/
-#App-Header{
-  width: 100%;
-  height: 10%;
-
-  position: relative;
-
-  background-color: black;
-}
-
-#Header-Title{
-  width: 100%;
-  height: 25%;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  font-size: 40px;
-  letter-spacing: 10px;
-  font-family: Headache;
-
-
-  text-align: center;
-
-  color: white;
-}
-
-
-
-/**
 * BODY
 **/
 #App-Body{
   width: 100%;
-  height: 95%;
+  height: 100%;
 
   background-color: grey;
+
+  overflow: hidden;
 }
 
 #Body-Links{
   display: flex;
-  
-  width: 90%;
-  height: 90%;
+  flex-wrap: wrap;
 
-  padding: 5%;
+  width: 90%;
+  height: 95%;
+
+  padding-top: 2.5%;
+  padding-left: 7.5%;
 }
 
 
@@ -62,4 +33,9 @@ body{
 @font-face {
   font-family: Headache;
   src: url("Resources/Headache.otf");
+}
+
+@font-face {
+  font-family: Abyssopelagic;
+  src: url("Resources/Abyssopelagic.otf");
 }
