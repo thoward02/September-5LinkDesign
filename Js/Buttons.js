@@ -40,7 +40,8 @@ function CreateButtons(){
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmzzXzK47fN6RBPJ66xIvbLGo0fi73KLUo1J291NcEJNqguGI0lA",
     "https://ih0.redbubble.net/image.662328004.4359/mp,840x830,matte,f8f8f8,t-pad,750x1000,f8f8f8.u1.jpg",
     "https://art.pixilart.com/62a8c79f0aa7b4a.png",
-    "https://pbs.twimg.com/profile_images/784976735007760384/wfWIHWWc_400x400.jpg"
+    "https://pbs.twimg.com/profile_images/784976735007760384/wfWIHWWc_400x400.jpg",
+    "https://bigmemes.funnyjunk.com/pictures/Owo_753219_6598663.jpg"
   ];
 
 
@@ -68,8 +69,22 @@ function CreateButtons(){
 
 }
 
+function AddKeyPressChange(){
+  window.onkeydown = function(){
+    //Remove items
+    for(var items in document.getElementById("Body-Links").children){
+        let Elem = document.getElementById("Body-Links").children[items];
+        if(Elem.nodeName == "DIV"){
+          document.getElementById("Body-Links").removeChild(Elem);
+        }
+    }
 
+    //Add items
+    CreateButtons();
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function(){
   CreateButtons();
+  AddKeyPressChange();
 });
