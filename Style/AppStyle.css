@@ -72,9 +72,7 @@
 
   text-align: center;
 
-  visibility: hidden;
-
-  transition: visibility 0s linear 0s, opacity 300ms;
+  transition: margin-top 0.5s;
 
   font-family: Abyssopelagic;
   font-size: 30px;

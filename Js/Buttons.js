@@ -8,7 +8,6 @@ function CollapsMenu(){
     let Child = document.getElementById("Pathing-Content").children[Children];
 
     if(Child.nodeName == "DIV"){
-      Child.style.visibility = "hidden";
       Child.style.marginTop = "-100px";
     }
 
@@ -28,8 +27,7 @@ function UnCollapsMenu(){
     let Child = document.getElementById("Pathing-Content").children[Children];
 
     if(Child.nodeName == "DIV"){
-      Child.style.visibility = "visible";
-      Child.style.marginTop = "0px;";
+      Child.style.marginTop = "0px";
     }
 
   }
@@ -45,9 +43,38 @@ function AddCollapsableMenu(){
 
 }
 
+function AddLinks(){
+  let Children = document.getElementById("Pathing-Content").children;
+
+  for(var Items in Children){
+    let Elem = Children[Items];
+    //Ensure you're on the link
+    if(Elem.nodeName == "DIV"){
+      //Add click event
+      Elem.addEventListener("click", function(Elem){
+        //If the outside element is clicked
+        if(Elem.target.nodeName == "DIV"){
+          window.open(SecondElem.children[0].id)
+        }
+        //If the inside element is clicked
+        if(Elem.target.nodeName == "P"){
+          window.open(Elem.target.id);
+
+        }
+      });
+
+
+    }
+  }
+
+}
+
 document.addEventListener("DOMContentLoaded", function(){
   //Add menu content
   AddCollapsableMenu();
+
+  //Add links
+  AddLinks();
 
   //Main Content
   CreateOwOs();
