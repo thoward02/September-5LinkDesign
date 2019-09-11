@@ -43,12 +43,10 @@
 
 }
 
-#Header-Pathing:hover{
-  background-color: rgb(25, 25, 25);
-}
-
 #Pathing-Title{
-  padding-top: 5.5%;
+  width: 50%;
+  height: 50%;
+
 }
 
 #Pathing-Content{
