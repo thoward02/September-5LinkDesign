@@ -4,17 +4,58 @@
 
     <!-- Style -->
     <link href="Resources/SubPageStyle.css" type="text/css" rel="stylesheet"></link>
+
+    <!-- Button Script -->
+    <script>
+      function FetchWeather(){
+        //Build request
+        const APIKEY = "cc1d34bd70a8d4432a01920d9464e392";
+        const ZIP    = "30549";
+        const URL    = "https://api.openweathermap.org/data/2.5/weather?zip="+ZIP+",us&appid=" + APIKEY;
+
+        //Fetch data
+        let Request = new XMLHttpRequest();
+        Request.open("GET", URL);
+
+        //handle data
+        Request.onload = function(Data){
+          //To JSON
+          let Response = JSON.parse(Data.target.response);
+
+          //Append to data
+          let Elem   = document.getElementById("WeatherElem");
+          let Temp   = Math.floor((parseInt(Response.main.temp) - 273.15) * (9/5) + 32);
+
+          let Message = "Today we have " + Response.weather[0].description + "s and a temp of: " + Temp + " degrees F";
+          Elem.innerHTML = Message;
+
+          Elem.style.color = "cyan";
+        }
+
+        //Send request
+        Request.send();
+      }
+      document.addEventListener("DOMContentLoaded", FetchWeather);
+    </script>
   </head>
 
   <body>
-    <div id="App-Header">
-      <div id="Header-Title">Page Three</div>
-    </div>
-    <div id="App-Body">
-      <div id="Body-MainPage">
-        <div id="MainPage-Header"></div>
-        <div id="MainPage-Body"></div>
+    <div id="App">
+      <div id="App-Header">
+        <div id="Header-Title">Page Two</div>
       </div>
+      <div id="App-Body">
+      <div id="Body-MainPage">
+        <div id="MainPage-Header">
+          <div class="MainPage-Header-Class">Github</div>
+        </div>
+        <div id="MainPage-BodyStyle">
+          <div class="MainPage-BodyStyle-Class">Hol on, lemme just load some weather data</div>
+          <div class="MainPage-BodyStyle-Class" id="WeatherElem">Loading...</div>
+          </div>
+
+      </div>
+    </div>
     </div>
   </body>
 
