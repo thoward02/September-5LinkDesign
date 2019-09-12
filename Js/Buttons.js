@@ -54,12 +54,13 @@ function AddLinks(){
       Elem.addEventListener("click", function(Elem){
         //If the outside element is clicked
         if(Elem.target.nodeName == "DIV"){
-          window.open(SecondElem.children[0].id)
+          //Open the sub child's ID
+          window.open(Elem.target.children[0].id);
         }
         //If the inside element is clicked
         if(Elem.target.nodeName == "P"){
+          //Open the elements's ID
           window.open(Elem.target.id);
-
         }
       });
 
