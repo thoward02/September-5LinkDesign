@@ -1,40 +1,40 @@
 .Link{
-  margin-left: 20%;
-  margin-bottom: 2%;
+  margin-left:      20%;
+  margin-bottom:    2%;
 
-  float: left;
+  float:            left;
 
-  width: 20%;
-  height: 30%;
+  width:            20%;
+  height:           30%;
 
-  margin-left: 2%;
+  margin-left:      2%;
 
-  border-radius: 25px;
+  border-radius:    25px;
 
-  overflow: hidden;
+  overflow:         hidden;
 
   background-color: cyan;
 
 }
 
 .Link div{
-  height: 2%;
-  padding: 10%;
+  height:          2%;
+  padding:         10%;
 
-  font-family: Abyssopelagic;
+  font-family:     Abyssopelagic;
 
-  font-size: 30px;
-  font-weight: 400;
+  font-size:       30px;
+  font-weight:     400;
 
-  text-align: center;
+  text-align:      center;
 }
 
 
 .Link-Image{
-  width: 100%;
-  height: 70%;
+  width:           100%;
+  height:          70%;
 
-  margin-top: 10%;
+  margin-top:      10%;
 
 
 }
